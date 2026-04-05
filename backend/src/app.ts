@@ -38,7 +38,9 @@ app.get('/health', (_req, res) => {
 });
 
 import { authRouter } from '@modules/auth/auth.routes';
+import { usersRouter } from '@modules/users/users.routes';
 app.use('/api/v1/auth', authRouter);
+app.use('/api/v1/users', usersRouter);
 
 app.use(errorHandler);
 
