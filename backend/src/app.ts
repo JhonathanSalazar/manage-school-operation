@@ -12,6 +12,7 @@ import { staffRouter } from '@modules/staff/staff.routes';
 import { classesRouter } from '@modules/classes/classes.routes';
 import { noticesRouter } from '@modules/notices/notices.routes';
 import { leaveRouter } from '@modules/leave/leave.routes';
+import { dashboardRouter } from '@modules/dashboard/dashboard.routes';
 
 const app = express();
 
@@ -51,6 +52,7 @@ app.use('/api/v1/staff', staffRouter);
 app.use('/api/v1/classes', classesRouter);
 app.use('/api/v1/notices', noticesRouter);
 app.use('/api/v1/leave', leaveRouter);
+app.use('/api/v1/dashboard', dashboardRouter);
 
 app.use(errorHandler);
 
