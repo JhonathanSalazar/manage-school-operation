@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+school:
+  backend:
+    base-url: ${SCHOOL_BACKEND_URL:http://localhost:5007}
+    internal-secret: ${JAVA_INTERNAL_SECRET:change_me_internal_secret_min_32_chars}
+  pdf:
+    output-dir: ${PDF_OUTPUT_DIR:/tmp/reports}
+
+spring:
+  application:
+    name: school-report-service
+  jackson:
+    property-naming-strategy: LOWER_CAMEL_CASE
+    deserialization:
+      fail-on-unknown-properties: false
+
+logging:
+  level:
+    com.school: DEBUG
