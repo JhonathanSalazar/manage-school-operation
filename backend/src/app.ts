@@ -41,10 +41,12 @@ import { authRouter } from '@modules/auth/auth.routes';
 import { usersRouter } from '@modules/users/users.routes';
 import { studentsRouter } from '@modules/students/students.routes';
 import { staffRouter } from '@modules/staff/staff.routes';
+import { classesRouter } from '@modules/classes/classes.routes';
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/users', usersRouter);
 app.use('/api/v1/students', studentsRouter);
 app.use('/api/v1/staff', staffRouter);
+app.use('/api/v1/classes', classesRouter);
 
 app.use(errorHandler);
 
