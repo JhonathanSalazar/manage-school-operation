@@ -37,9 +37,8 @@ app.get('/health', (_req, res) => {
   res.json({ status: 'ok' });
 });
 
-// Routes will be mounted here in later phases
-// import { authRouter } from '@modules/auth/auth.routes';
-// app.use('/api/v1/auth', authRouter);
+import { authRouter } from '@modules/auth/auth.routes';
+app.use('/api/v1/auth', authRouter);
 
 app.use(errorHandler);
 
