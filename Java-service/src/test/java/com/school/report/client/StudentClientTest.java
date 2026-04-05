@@ -36,7 +36,7 @@ class StudentClientTest {
         expected.setLastName("Doe");
 
         when(restTemplate.getForObject(
-                eq("http://localhost:5007/api/v1/students/abc-123"),
+                eq("http://localhost:5007/api/v1/students/internal/abc-123"),
                 eq(StudentDto.class)))
                 .thenReturn(expected);
 
@@ -64,7 +64,7 @@ class StudentClientTest {
         studentClient.findById("student-xyz");
 
         verify(restTemplate).getForObject(
-                eq("http://localhost:5007/api/v1/students/student-xyz"),
+                eq("http://localhost:5007/api/v1/students/internal/student-xyz"),
                 eq(StudentDto.class));
     }
 }

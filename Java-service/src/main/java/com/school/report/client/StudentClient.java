@@ -22,7 +22,7 @@ public class StudentClient {
     }
 
     public Optional<StudentDto> findById(String studentId) {
-        String url = backendBaseUrl + "/api/v1/students/" + studentId;
+        String url = backendBaseUrl + "/api/v1/students/internal/" + studentId;
         try {
             StudentDto student = restTemplate.getForObject(url, StudentDto.class);
             return Optional.ofNullable(student);
